@@ -1,0 +1,21 @@
+.labels {
+    display: block;
+    margin-bottom: 0;
+    text-align: left;
+    color: aliceblue;
+}
+
+.inputField {
+    background-color: #3b3b3b;
+    color: white;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    outline: none;
+}
+
+.inputField:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #4b4b4b;
+}
