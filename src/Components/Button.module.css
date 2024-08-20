@@ -1,11 +1,11 @@
-.btn {
+/* .btn {
     border-radius: 8px;
     border: 1px solid transparent;
     padding: 0.6em 2.6em;
     font-size: 1em;
     font-weight: 500;
     font-family: inherit;
-    background-color: #3b3b3b;
+    background-color: #007bff;
     color: white;
     cursor: pointer;
     transition: border-color 0.25s;
@@ -19,4 +19,31 @@
 .btn:focus,
 .btn:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
+} */
+
+.btn {
+    background-color: #007bff;
+    padding: 0.6em 2.6em;
+    font-size: 1em;
+    color: #fff;
+    font-size: 1em;
+    font-weight: medium;
+    border-radius: 8px;
+    border: none;
+    text-decoration: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #0056b3, 0 0 0 4px rgba(255, 255, 255, 0.5);
+} 
+
+.btn a {
+    color: aliceblue;
 }
