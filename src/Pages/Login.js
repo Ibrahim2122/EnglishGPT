@@ -28,6 +28,8 @@ function Login() {
   const submitHandler = e => {
     e.preventDefault();
 
+    console.log(!username)
+
     if (!username || !pwd) {
       setErrMsg("Username or Password is incorrect!");
       console.log("Username or Password is incorrect!");

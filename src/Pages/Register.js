@@ -53,10 +53,13 @@ function Register() {
   const submitHandler = (e) => {
     e.preventDefault();
 
-    if (username || pwd || matchPwd) {
+    console.log(!username)
+
+    if (!username || !pwd || !matchPwd) {
       setErrMsg("All fields are required");
       setSuccess(false);
       console.log("I am here");
+      return;
     }
 
     try {
