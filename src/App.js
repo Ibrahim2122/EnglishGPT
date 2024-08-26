@@ -1,20 +1,16 @@
 import React from "react";
 // import { Routes, Route } from "react-router-dom";
-import Login from "./Pages/Login";
-import Register from "./Pages/Register";
-import Chatbot from "./Pages/Chatbot";
-import NotFound from "./Pages/NotFound";
 import Button from "./Components/Button";
 import PageLayout from "./Components/PageLayout";
 import styles from "./App.module.css";
 import { Link } from "react-router-dom";
 
-{
-  /* <Login />
-      <Register />
-      <Chatbot />
-      <NotFound /> */
-}
+// {
+//   /* <Login />
+//       <Register />
+//       <Chatbot />
+//       <NotFound /> */
+// }
 
 function App() {
   return (

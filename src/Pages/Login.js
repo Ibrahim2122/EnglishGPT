@@ -4,10 +4,12 @@ import Button from "../Components/Button";
 import PageLayout from "../Components/PageLayout";
 import Form from '../Components/Form'
 import styles from "./Login.module.css"
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const userRef = useRef("");
   const errRef = useRef("");
+  const navigate = useNavigate()
 
   const [username, setUsername] = useState("");
   // const [validName, setValidName] = useState(false);
@@ -27,23 +29,25 @@ function Login() {
 
   const submitHandler = e => {
     e.preventDefault();
+    
 
-    console.log(!username)
+    // if (!username || !pwd) {
+    //   setErrMsg("Username or Password is incorrect!");
+    //   console.log("Username or Password is incorrect!");
+    // }
 
-    if (!username || !pwd) {
-      setErrMsg("Username or Password is incorrect!");
-      console.log("Username or Password is incorrect!");
-    }
+    // try {
+    //   // Authinticate the user
+    //   console.log(username)
+    //   console.log(pwd)
+    //   setUsername('');
+    //   setPwd('');
+    // } catch (err) {
+    //   // Catch any errors and use setErrMsg() to display it
+    // }
 
-    try {
-      // Authinticate the use
-      console.log(username)
-      console.log(pwd)
-      setUsername('');
-      setPwd('');
-    } catch (err) {
-      // Catch any errors and use setErrMsg() to display it
-    }
+    navigate("/chatbot")
+
   }
  
   return (

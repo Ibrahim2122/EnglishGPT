@@ -10,6 +10,7 @@ import {
   faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
@@ -53,7 +54,7 @@ function Register() {
   const submitHandler = (e) => {
     e.preventDefault();
 
-    console.log(!username)
+    console.log(!username);
 
     if (!username || !pwd || !matchPwd) {
       setErrMsg("All fields are required");
@@ -82,7 +83,7 @@ function Register() {
       {success ? (
         <section class={styles.success}>
           <h1>Account created successfuly!</h1>
-          <Button>Login</Button>
+          <Button><Link to="/login">Login</Link></Button>
         </section>
       ) : (
         <Form header="Register" onSubmitHandler={submitHandler}>
@@ -168,8 +169,7 @@ function Register() {
             Already registered?
             <br />
             <span className={styles.line}>
-              {/*put router link here*/}
-              <a href="#">Sign In</a>
+              <Link to="/login">Sign In</Link>
             </span>
           </p>
         </Form>
