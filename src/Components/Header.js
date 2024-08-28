@@ -10,8 +10,8 @@ const Header = () => {
     // Log out function
     const submitHandler = e => {
         e.preventDefault();
-        console.log("You are out!")
-        navigate("/")
+        console.log("You are out!");
+        navigate("/");
     }
 
   return (
