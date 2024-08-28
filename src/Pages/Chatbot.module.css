@@ -1,7 +1,7 @@
 .pageLayout {
     margin: 0;
     box-sizing: border-box;
-    min-height: 100vh;
+    min-height: 80vh;
     max-width: 100%;
     display: flex;
     flex-direction: column;

@@ -1,15 +1,25 @@
 import React from 'react';
 import styles from './Header.module.css';
 import Button from './Button';
+import { useNavigate } from 'react-router-dom';
 
-// Define the Header component
 const Header = () => {
+
+    const navigate = useNavigate();
+
+    // Log out function
+    const submitHandler = e => {
+        e.preventDefault();
+        console.log("You are out!")
+        navigate("/")
+    }
+
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>MyLogo</div>
-      <div className={styles.searchContainer}>
+      <div className={styles.logo}>EnglishGPT</div>
+      <form className={styles.searchContainer} onSubmit={submitHandler}>
         <Button>Log out</Button>
-      </div>
+      </form>
     </header>
   );
 };
